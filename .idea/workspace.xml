@@ -5,13 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80e3a40a-3aec-40be-ace9-b663a2059116" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/lib/app/core/app.initializer.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/data/cache/cache.interface.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/data/cache/cache.keys.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/data/cache/cache.storage.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/data/data.bindings.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/data/local/local.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/data/network/service/api.service.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/data/network/service/interceptors/interceptor.connectivity.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/data/network/service/interceptors/interceptor.error.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/data/network/service/interceptors/interceptor.request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/data/network/service/interceptors/interceptor.response.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/data/network/service/interceptors/interceptors.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/module/home/home.view.model.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Flutter/GeneratedPluginRegistrant.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/windows/flutter/generated_plugin_registrant.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/windows/flutter/generated_plugins.cmake" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -63,7 +87,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680277984545</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update">
+      <created>1680278524571</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680278524571</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
