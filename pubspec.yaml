@@ -18,6 +18,7 @@ dependencies:
   flutter_native_splash: ^2.2.19
   pin_code_fields: ^7.4.0
   fluttertoast: ^8.2.1
+  flutter_localization: ^0.1.10
 
   # dependency injection
   get_it: ^7.2.0
@@ -50,24 +51,33 @@ dependencies:
 
   # functional
   fpdart: ^0.5.0
-  intl: ^0.18.0
   equatable: ^2.0.5
   collection: ^1.17.0
   permission_handler: ^10.2.0
+  flutter_dotenv: ^5.0.2
+
+dependency_overrides: 
+  intl: ^0.18.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   flutter_lints: ^2.0.0
+  build_runner: ^2.3.3
+  
+  freezed: ^2.3.2
+  json_serializable: ^6.6.1
+  riverpod_generator: ^2.1.6
+
   rename: ^2.1.1
-  change_app_package_name: ^1.1.0
+  change_app_package_name: ^1.1.0  
 
 flutter:
   uses-material-design: true
 
   # assets:
-  #   - images/
+  #   - assets/images/
 
 
   # fonts:
@@ -81,3 +91,8 @@ flutter:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
+
+scripts:
+  build_runner:
+    build: flutter pub run build_runner build --delete-conflicting-outputs
+    watch: flutter pub run build_runner watch

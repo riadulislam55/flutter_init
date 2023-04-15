@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_init/app/data/data.bindings.dart';
+import 'package:flutter_init/app/core/service/service.bindings.dart';
 import 'package:get_it/get_it.dart';
 
 class AppInitializer {
@@ -18,14 +18,14 @@ class AppInitializer {
     };
 
     await _initServiceLocator();
-    await _initDataBindings();
+    await _initServiceBindings();
   }
 
   static Future<void> _initServiceLocator() async {
     getIt = GetIt.instance;
   }
 
-  static Future<void> _initDataBindings() async {
-    await DataBindings.init();
+  static Future<void> _initServiceBindings() async {
+    await ServiceBindings.init();
   }
 }
