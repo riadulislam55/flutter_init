@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
-
-import '../utils/app.helper.dart';
+import '/app/core/utils/extensions/color.extension.dart';
 
 class AppColors {
   AppColors._();
-  static Color primaryColor = HexColor('#FFFFFF');
-  static Color secondaryColor = HexColor('#009245');
-  static Color accentColor = HexColor('#2BBED9');
-  static Color bgColor = HexColor('#F4FDFF');
-  static Color blackColor = HexColor('#120D26');
-  static Color blackolidColor = HexColor('#747378');
-  static Color buttonTextColor = HexColor('#F6F6F6');
+
+  static Color primaryColor = '#FFFFFF'.toColor();
+  static Color onPrimaryColor = '#FFFFFF'.toColor();
+
+  static Color secondaryColor = '#009245'.toColor();
+  static Color accentColor = '#2BBED9'.toColor();
+  static Color bgColor = '#F4FDFF'.toColor();
+  static Color blackColor = '#120D26'.toColor();
+  static Color blackolidColor = '#747378'.toColor();
+  static Color buttonTextColor = '#F6F6F6'.toColor();
   static Color unSelectedColor = blackColor;
-  // static Color unSelectedColor = HexColor('#A9A9A9');
+  // static Color unSelectedColor = '#A9A9A9'.toColor();
   static Color titleColor = blackColor;
-  // static Color titleColor = HexColor('#45464B');
-  static Color borderColor = HexColor('#EAECF0');
-  static Color greenLight = HexColor('#DAF4E5');
+  // static Color titleColor = '#45464B'.toColor();
+  static Color borderColor = '#EAECF0'.toColor();
+  static Color greenLight = '#DAF4E5'.toColor();
   static Color boxShadowColor = const Color.fromRGBO(0, 146, 69, 0.16);
 }

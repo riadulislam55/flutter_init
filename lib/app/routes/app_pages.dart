@@ -1,7 +1,3 @@
-// ignore_for_file: non_constant_identifier_names
-
-import '../../app/core/values/language/string.translate.helper.dart';
-
 import 'index.dart';
 
 part 'app_routes.dart';
@@ -16,11 +12,7 @@ class AppPages {
     routes: <RouteBase>[
       GoRoute(
         path: _Paths.HOME,
-        builder: (context, state) => Container(
-          child: Center(
-            child: Text("helloWorld".tr),
-          ),
-        ),
+        builder: (context, state) => const HomeView(),
       ),
       GoRoute(
         path: _Paths.DETAILS,

@@ -2,13 +2,13 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../domains/usecases/todo/todo.usecase.provider.dart';
 
-final todoListProvider =
-    StateNotifierProvider<TodosStateNotifier, dynamic>((ref) {
-  return TodosStateNotifier(ref);
+final homeControllerProvider =
+    StateNotifierProvider<HomeController, dynamic>((ref) {
+  return HomeController(ref);
 });
 
-class TodosStateNotifier extends StateNotifier<dynamic> {
-  TodosStateNotifier(this.ref) : super({}) {
+class HomeController extends StateNotifier<dynamic> {
+  HomeController(this.ref) : super({}) {
     loadTodos();
   }
 
