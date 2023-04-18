@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:json_theme/json_theme.dart';
 
 import '../core/app.initializer.dart';
+import '../core/utils/log.print.helper.dart';
 import '../core/values/language/app.localization.dart';
 import '../routes/index.dart';
 // ignore: depend_on_referenced_packages
@@ -19,49 +20,29 @@ class MyApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final themeModel = ref.watch(themeControllerProvider);
     AppInitializer.getIt.registerSingleton<BuildContext>(context);
-    return FutureBuilder(
-      future: _loadTheme(themeModel.brightness),
-      builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
-          return Container();
-        }
+    return ref.watch(themeLoadProvider(themeModel.brightness)).when(
+          loading: () => Container(),
+          data: (data) => MaterialApp.router(
+            title: 'Flutter Demo',
 
-        final themeData = snapshot.data;
+            /// routings
+            routeInformationParser: AppPages.routes.routeInformationParser,
+            routeInformationProvider: AppPages.routes.routeInformationProvider,
+            routerDelegate: AppPages.routes.routerDelegate,
 
-        return MaterialApp.router(
-          title: 'Flutter Demo',
-
-          /// routings
-          routeInformationParser: AppPages.routes.routeInformationParser,
-          routeInformationProvider: AppPages.routes.routeInformationProvider,
-          routerDelegate: AppPages.routes.routerDelegate,
-
-          /// localizations
-          localizationsDelegates: const [
-            AppLocalizations.delegate,
-            GlobalMaterialLocalizations.delegate,
-            GlobalWidgetsLocalizations.delegate,
-          ],
-          supportedLocales: const [
-            Locale('en', ''), // English
-          ],
-          theme: themeData,
+            /// localizations
+            localizationsDelegates: const [
+              AppLocalizations.delegate,
+              GlobalMaterialLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+            ],
+            supportedLocales: const [
+              Locale('en', ''), // English
+            ],
+            theme: data,
+          ),
+          error: (error, stackTrace) => Container(),
         );
-      },
-    );
-  }
-
-  Future<ThemeData> _loadTheme(Brightness brightness) async {
-    var theme = brightness == Brightness.light ? "light_theme" : "light_theme";
-    final themeStr = await rootBundle.loadString('themes/$theme.json');
-    final themeJson = json.decode(themeStr);
-
-    final themeData = ThemeDecoder.decodeThemeData(
-          themeJson,
-          validate: true,
-        ) ??
-        ThemeData();
-    return themeData;
   }
 }
 

@@ -4,6 +4,6 @@ import '../../../../domains/repositories/todo.repository.dart';
 import '../../source/todo/todo.provider.dart';
 import 'todo.repository.impl.dart';
 
-final todosProvider = Provider<TodosRepository>((ref) {
+final todoRepositoryProvider = Provider<TodosRepository>((ref) {
   return TodoRepositoryImpl(ref.read(todoApiProvider));
 });

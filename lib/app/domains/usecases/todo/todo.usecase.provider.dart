@@ -5,5 +5,5 @@ import 'todo.usecase.dart';
 import 'todo.usecase.impl.dart';
 
 final todoUsecaseProvider = Provider<GetTodosUseCase>((ref) {
-  return GetTodoUseCaseImpl(ref.read(todosProvider));
+  return GetTodosUseCaseImpl(ref.read(todoRepositoryProvider));
 });
