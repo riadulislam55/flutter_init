@@ -1,5 +1,8 @@
+import 'package:dio/dio.dart';
+import 'package:flutter_init/app/core/utils/failure.dart';
 import 'package:flutter_init/app/core/utils/type_defs.dart';
 import 'package:flutter_init/app/domains/models/todo/todo.dart';
+import 'package:fpdart/fpdart.dart';
 
 import '../../../../domains/repositories/todo.repository.dart';
 import '../../source/todo/todo.api.dart';
@@ -33,8 +36,13 @@ class TodoRepositoryImpl implements TodosRepository {
   }
 
   @override
-  FutureEither<List<Todo>> loadTodos() {
-    // TODO: implement loadTodos
-    throw UnimplementedError();
+  FutureEither<List<Todo>> loadTodos() async {
+    try {
+      Response<dynamic> response = await api.getAllTodos();
+      var todos = response.data as List;
+      return right(todos.map((e) => Todo.fromJson(e)).toList());
+    } on DioError catch (e) {
+      return left(Failure(e.message ?? "failed", e.stackTrace));
+    }
   }
 }

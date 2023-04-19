@@ -1,10 +1,13 @@
 {
+  "appBarTheme": {
+    "foregroundColor": "#fffafafb"
+  },
   "applyElevationOverlayColor": false,
   "brightness": "light",
   "buttonTheme": {
     "alignedDropdown": false,
     "colorScheme": {
-      "background": "#ff4d968d",
+      "background": "#ff4db6ac",
       "brightness": "light",
       "error": "#ffb00020",
       "errorContainer": "#ffb00020",
@@ -24,9 +27,9 @@
       "onTertiaryContainer": "#ff000000",
       "outline": "#ff000000",
       "outlineVariant": "#ff000000",
-      "primary": "#ff00695c",
+      "primary": "#ff009688",
       "primaryContainer": "#ff6200ee",
-      "secondary": "#ff00695c",
+      "secondary": "#ff009688",
       "secondaryContainer": "#ff03dac6",
       "shadow": "#ff000000",
       "surface": "#ffffffff",
@@ -81,7 +84,7 @@
   "canvasColor": "#fffafafa",
   "cardColor": "#ffffffff",
   "colorScheme": {
-    "background": "#ff4d968d",
+    "background": "#ff4db6ac",
     "brightness": "light",
     "error": "#ffb00020",
     "errorContainer": "#ffb00020",
@@ -101,9 +104,9 @@
     "onTertiaryContainer": "#ff000000",
     "outline": "#ff000000",
     "outlineVariant": "#ff000000",
-    "primary": "#ff00695c",
+    "primary": "#ff009688",
     "primaryContainer": "#ff6200ee",
-    "secondary": "#ff00695c",
+    "secondary": "#ff009688",
     "secondaryContainer": "#ff03dac6",
     "shadow": "#ff000000",
     "surface": "#ffffffff",
@@ -119,14 +122,14 @@
     "style": {
       "backgroundColor": {
         "disabled": "#1f000000",
-        "dragged": "#ff00695c",
-        "empty": "#ff00695c",
-        "error": "#ff00695c",
-        "focused": "#ff00695c",
-        "hovered": "#ff00695c",
-        "pressed": "#ff00695c",
-        "scrolledUnder": "#ff00695c",
-        "selected": "#ff00695c"
+        "dragged": "#ff009688",
+        "empty": "#ff009688",
+        "error": "#ff009688",
+        "focused": "#ff009688",
+        "hovered": "#ff009688",
+        "pressed": "#ff009688",
+        "scrolledUnder": "#ff009688",
+        "selected": "#ff009688"
       },
       "elevation": {
         "disabled": 0,
@@ -206,11 +209,14 @@
       }
     }
   },
+  "floatingActionButtonTheme": {
+    "foregroundColor": "#fffafafb"
+  },
   "focusColor": "#1f000000",
   "highlightColor": "#66bcbcbc",
   "hintColor": "#99000000",
   "hoverColor": "#0a000000",
-  "indicatorColor": "#ff00695c",
+  "indicatorColor": "#ff009688",
   "inputDecorationTheme": {
     "alignLabelWithHint": false,
     "filled": false,
@@ -221,9 +227,9 @@
   },
   "materialTapTargetSize": "shrinkWrap",
   "platform": "macOS",
-  "primaryColor": "#ff00695c",
-  "primaryColorDark": "#ff00544a",
-  "primaryColorLight": "#ff66a59d",
+  "primaryColor": "#ff009688",
+  "primaryColorDark": "#ff00786d",
+  "primaryColorLight": "#ff66c0b8",
   "primaryIconTheme": {
     "color": "#ffffffff"
   },
@@ -320,13 +326,10 @@
     }
   },
   "scaffoldBackgroundColor": "#fffafafa",
-  "secondaryHeaderColor": "#ff73ada5",
+  "secondaryHeaderColor": "#ff73c5be",
   "shadowColor": "#ff000000",
   "splashColor": "#66c8c8c8",
   "splashFactory": "splash",
-  "tabBarTheme": {
-    "indicatorSize": "tab"
-  },
   "textTheme": {
     "bodyLarge": {
       "color": "#dd000000",

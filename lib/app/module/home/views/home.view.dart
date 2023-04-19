@@ -1,3 +1,4 @@
+import 'package:flutter_init/app/core/values/language/string.translate.helper.dart';
 import 'package:flutter_init/app/routes/index.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -15,7 +16,10 @@ class _HomeViewState extends ConsumerState<HomeView> {
   Widget build(BuildContext context) {
     var homeState = ref.watch(homeControllerProvider);
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text("home".tr(context)),
+        centerTitle: false,
+      ),
       body: Center(
         child: homeState.when(
           loading: () => const CircularProgressIndicator(),

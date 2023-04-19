@@ -1,9 +1,5 @@
-import 'dart:convert';
-
-import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../core/app.initializer.dart';
 import '../core/values/language/app.localization.dart';
 import '../routes/index.dart';
 // ignore: depend_on_referenced_packages
@@ -17,10 +13,10 @@ class MyApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final themeModel = ref.watch(themeControllerProvider);
-    AppInitializer.getIt.registerSingleton<BuildContext>(context);
     return ref.watch(themeLoadProvider(themeModel.brightness)).when(
           loading: () => Container(),
           data: (data) => MaterialApp.router(
+            debugShowCheckedModeBanner: false,
             title: 'Flutter Demo',
 
             /// routings

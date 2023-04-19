@@ -11,8 +11,8 @@ class AppLocalizations {
 
   AppLocalizations(this._localizedStrings);
 
-  static AppLocalizations of(BuildContext context) {
-    return Localizations.of<AppLocalizations>(context, AppLocalizations)!;
+  static AppLocalizations? of(BuildContext context) {
+    return Localizations.of<AppLocalizations>(context, AppLocalizations);
   }
 
   String translate(String key) {
