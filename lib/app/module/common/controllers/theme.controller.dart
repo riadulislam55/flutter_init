@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:json_theme/json_theme.dart';
 
+import '../../../core/utils/log.print.helper.dart';
 import '../../../domains/models/theme/theme.model.dart';
 import '../../../domains/usecases/theme/theme.usecase.dart';
 import '../../../domains/usecases/theme/theme.usecase.provider.dart';
@@ -37,7 +38,7 @@ class ThemeController extends StateNotifier<ThemeModel> {
 
   Future<void> getTheme() async {
     final theme = await _useCase.getTheme();
-    state = theme;
+    theme.fold((l) => logError(l.message), (r) => state = r);
   }
 
   Future<void> saveTheme(ThemeModel theme) async {

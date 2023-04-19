@@ -1,5 +1,9 @@
+import 'package:flutter_init/app/domains/models/todo/todo.dart';
+
+import '../../../core/utils/type_defs.dart';
+
 abstract class GetTodosUseCase {
-  Future<List<dynamic>> execute();
+  FutureEither<List<Todo>> execute();
 }
 
 abstract class SaveTodoUseCase {

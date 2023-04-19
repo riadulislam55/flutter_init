@@ -1,3 +1,6 @@
+import 'package:flutter_init/app/core/utils/type_defs.dart';
+import 'package:flutter_init/app/domains/models/todo/todo.dart';
+
 import '../../../../domains/repositories/todo.repository.dart';
 import '../../source/todo/todo.api.dart';
 
@@ -6,31 +9,32 @@ class TodoRepositoryImpl implements TodosRepository {
   final TodoApi api;
 
   @override
-  Future<void> deleteAllTodos() {
-    // api.getAllTodos();
+  FutureEitherVoid deleteAllTodos() {
+    // TODO: implement deleteAllTodos
     throw UnimplementedError();
   }
 
   @override
-  Future<void> deleteTodo(String id) {
+  FutureEitherVoid deleteTodo(String id) {
     // TODO: implement deleteTodo
     throw UnimplementedError();
   }
 
   @override
-  Future getTodoById(String id) {
+  FutureEither getTodoById(String id) {
     // TODO: implement getTodoById
     throw UnimplementedError();
   }
 
   @override
-  Future<List<dynamic>> loadTodos() async {
-    return <dynamic>[];
+  FutureEitherVoid saveTodo(todo) {
+    // TODO: implement saveTodo
+    throw UnimplementedError();
   }
 
   @override
-  Future<void> saveTodo(todo) {
-    // TODO: implement saveTodo
+  FutureEither<List<Todo>> loadTodos() {
+    // TODO: implement loadTodos
     throw UnimplementedError();
   }
 }

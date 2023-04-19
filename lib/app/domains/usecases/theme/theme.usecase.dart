@@ -1,3 +1,4 @@
+import '../../../core/utils/type_defs.dart';
 import '../../models/theme/theme.model.dart';
 import '../../repositories/theme.repository.dart';
 
@@ -7,11 +8,11 @@ class ThemeUseCase {
   ThemeUseCase({required ThemeRepository repository})
       : _repository = repository;
 
-  Future<ThemeModel> getTheme() async {
+  FutureEither<ThemeModel> getTheme() async {
     return await _repository.getTheme();
   }
 
-  Future<void> saveTheme(ThemeModel theme) async {
-    await _repository.setTheme(theme);
+  FutureEitherVoid saveTheme(ThemeModel theme) async {
+    return await _repository.setTheme(theme);
   }
 }

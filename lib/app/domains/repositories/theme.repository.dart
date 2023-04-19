@@ -1,6 +1,7 @@
+import '../../core/utils/type_defs.dart';
 import '../models/theme/theme.model.dart';
 
 abstract class ThemeRepository {
-  Future<ThemeModel> getTheme();
-  Future<void> setTheme(ThemeModel theme);
+  FutureEither<ThemeModel> getTheme();
+  FutureEitherVoid setTheme(ThemeModel theme);
 }

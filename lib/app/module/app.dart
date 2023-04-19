@@ -2,10 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:json_theme/json_theme.dart';
 
 import '../core/app.initializer.dart';
-import '../core/utils/log.print.helper.dart';
 import '../core/values/language/app.localization.dart';
 import '../routes/index.dart';
 // ignore: depend_on_referenced_packages

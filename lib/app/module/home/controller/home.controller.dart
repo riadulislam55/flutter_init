@@ -1,22 +1,29 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../domains/usecases/todo/todo.usecase.provider.dart';
+import 'state/todo_state.dart';
 
 final homeControllerProvider =
-    StateNotifierProvider<HomeController, dynamic>((ref) {
+    StateNotifierProvider<HomeController, TodoState>((ref) {
   return HomeController(ref);
 });
 
-class HomeController extends StateNotifier<dynamic> {
-  HomeController(this.ref) : super({}) {
+class HomeController extends StateNotifier<TodoState> {
+  final Ref ref;
+
+  HomeController(this.ref) : super(const TodoState.loading()) {
     loadTodos();
   }
 
-  final Ref ref;
   late final getTodos = ref.read(todoUsecaseProvider);
 
   Future<void> loadTodos() async {
-    state = await getTodos.execute();
+    state = const TodoState.loading();
+    var todos = await getTodos.execute();
+    todos.fold(
+      (l) => state = TodoState.error(l),
+      (r) => state = TodoState.loaded(r),
+    );
   }
 
   // Future<void> save(dynamic todo) async {

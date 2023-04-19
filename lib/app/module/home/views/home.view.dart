@@ -13,16 +13,16 @@ class HomeView extends ConsumerStatefulWidget {
 class _HomeViewState extends ConsumerState<HomeView> {
   @override
   Widget build(BuildContext context) {
-    var controller = ref.watch(homeControllerProvider);
-    return controller.when(
-      loading: () => const CircularProgressIndicator(),
-      data: (data) => Scaffold(
-        appBar: AppBar(),
-        body: const Center(
-          child: Text("Home View"),
+    var homeState = ref.watch(homeControllerProvider);
+    return Scaffold(
+      appBar: AppBar(),
+      body: Center(
+        child: homeState.when(
+          loading: () => const CircularProgressIndicator(),
+          loaded: (data) => const Text("Home View"),
+          error: (failer) => const Text("failure"),
         ),
       ),
-      error: (error, stactTrace) => Container(),
     );
   }
 }
