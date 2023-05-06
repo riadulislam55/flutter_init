@@ -1,5 +1,6 @@
+import 'package:flutter/material.dart';
+
 import '../../../core/utils/type_defs.dart';
-import '../../models/theme/theme.model.dart';
 import '../../repositories/theme.repository.dart';
 
 class ThemeUseCase {
@@ -8,11 +9,11 @@ class ThemeUseCase {
   ThemeUseCase({required ThemeRepository repository})
       : _repository = repository;
 
-  FutureEither<ThemeModel> getTheme() async {
+  FutureEither<Brightness> getTheme() async {
     return await _repository.getTheme();
   }
 
-  FutureEitherVoid saveTheme(ThemeModel theme) async {
-    return await _repository.setTheme(theme);
+  FutureEitherVoid saveTheme(Brightness brightness) async {
+    return await _repository.setTheme(brightness);
   }
 }
