@@ -20,4 +20,7 @@ class AppColors {
   static Color borderColor = '#EAECF0'.toColor();
   static Color greenLight = '#DAF4E5'.toColor();
   static Color boxShadowColor = const Color.fromRGBO(0, 146, 69, 0.16);
+
+  // light text colors
+  static Color primaryTextColor = '#120D26'.toColor();
 }

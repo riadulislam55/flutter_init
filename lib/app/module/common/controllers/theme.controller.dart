@@ -1,10 +1,7 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:flutter_init/app/core/theme/app_theme.dart';
 import 'package:flutter_init/app/core/utils/failure.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:json_theme/json_theme.dart';
 
 import '../../../domains/usecases/theme/theme.usecase.dart';
 import '../../../domains/usecases/theme/theme.usecase.provider.dart';
@@ -45,15 +42,9 @@ class ThemeController extends StateNotifier<ThemeState> {
   }
 
   Future<ThemeData> loadThemeData(Brightness brightness) async {
-    var theme = brightness == Brightness.light ? "light_theme" : "light_theme";
-    final themeStr = await rootBundle.loadString('assets/themes/$theme.json');
-    final themeJson = json.decode(themeStr);
-
-    final themeData = ThemeDecoder.decodeThemeData(
-          themeJson,
-          validate: true,
-        ) ??
-        ThemeData();
+    var themeData = brightness == Brightness.light
+        ? AppTheme.lightTheme
+        : AppTheme.lightTheme;
     return themeData;
   }
 }
