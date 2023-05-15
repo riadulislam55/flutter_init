@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../values/dimens/app_font_size.dart';
 import 'app_colors.dart';
-import 'app_font_size.dart';
 
 final class AppTextStyleLight {
   static const fontFamily = "";

@@ -1,4 +1,4 @@
-abstract class AppFontSize {
+class AppFontSize {
   static const double fontSize2 = 2;
   static const double fontSize2_5 = 2.5;
   static const double fontSize4 = 4;
